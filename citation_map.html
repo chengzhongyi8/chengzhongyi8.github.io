@@ -31,24 +31,47 @@
                 }
                 .leaflet-popup-content { margin: 8px 10px !important; }
                 .leaflet-popup-content-wrapper { border-radius: 6px !important; }
+                /* --- Custom CSS pin markers (replace sprite) --- */
                 .awesome-marker {
-                    width: 22px !important;
-                    height: 29px !important;
-                    background-size: 450px 29px !important;
-                    font-size: 9px !important;
-                    line-height: 29px !important;
+                    background: var(--pin-color, #e74c3c) !important;
+                    background-image: none !important;
+                    width: 18px !important;
+                    height: 18px !important;
+                    border-radius: 50% !important;
+                    border: 2px solid #ffffff !important;
+                    box-shadow: 0 1px 4px rgba(0,0,0,0.4) !important;
+                    display: block !important;
+                    /* iconAnchor [17,42] -> place circle so its center is at (17,42):
+                       circle center at element (9,9); element placed at (x-17,y-42);
+                       center lands at (x-17+9, y-42+9) = (x-8, y-33). To center on point:
+                       offset left +8, top +33 - 42... simpler: left:-8px; top:9px relative */
+                    left: 8px !important;
+                    top: 33px !important;
                 }
                 .awesome-marker i {
-                    font-size: 9px !important;
-                    line-height: 29px !important;
-                    margin-top: 0 !important;
-                    display: block;
+                    display: none !important;
                 }
                 .awesome-marker-shadow {
-                    width: 22px !important;
-                    height: 10px !important;
-                    background-size: 22px 10px !important;
+                    display: none !important;
                 }
+                .awesome-marker-icon-red { --pin-color: #e74c3c; }
+                .awesome-marker-icon-darkred { --pin-color: #c0392b; }
+                .awesome-marker-icon-lightred { --pin-color: #ff7675; }
+                .awesome-marker-icon-orange { --pin-color: #f39c12; }
+                .awesome-marker-icon-beige { --pin-color: #d4a373; }
+                .awesome-marker-icon-green { --pin-color: #27ae60; }
+                .awesome-marker-icon-darkgreen { --pin-color: #1e8449; }
+                .awesome-marker-icon-lightgreen { --pin-color: #7dcea0; }
+                .awesome-marker-icon-blue { --pin-color: #2980b9; }
+                .awesome-marker-icon-darkblue { --pin-color: #1a5276; }
+                .awesome-marker-icon-lightblue { --pin-color: #7fb3d8; }
+                .awesome-marker-icon-cadetblue { --pin-color: #5d8aa8; }
+                .awesome-marker-icon-purple { --pin-color: #8e44ad; }
+                .awesome-marker-icon-darkpurple { --pin-color: #6c3483; }
+                .awesome-marker-icon-pink { --pin-color: #e84393; }
+                .awesome-marker-icon-gray { --pin-color: #7f8c8d; }
+                .awesome-marker-icon-lightgray { --pin-color: #b2babb; }
+                .awesome-marker-icon-black { --pin-color: #2c3e50; }
             </style>
 
             <style>html, body {
