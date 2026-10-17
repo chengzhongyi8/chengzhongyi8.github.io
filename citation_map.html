@@ -24,7 +24,49 @@
                     left: 0.0%;
                     top: 0.0%;
                 }
-                .leaflet-container { font-size: 1rem; }
+
+                /* --- Clean CSS circle markers (replace sprite pins) --- */
+                .awesome-marker {
+                    background: var(--pin-color, #e74c3c) !important;
+                    background-image: none !important;
+                    width: 18px !important;
+                    height: 18px !important;
+                    border-radius: 50% !important;
+                    border: 2px solid #ffffff !important;
+                    box-shadow: 0 1px 4px rgba(0,0,0,0.4) !important;
+                    display: block !important;
+                    left: 8px !important;
+                    top: 33px !important;
+                }
+                .awesome-marker i { display: none !important; }
+                .awesome-marker-shadow { display: none !important; }
+                .awesome-marker-icon-red { --pin-color: #e74c3c; }
+                .awesome-marker-icon-darkred { --pin-color: #c0392b; }
+                .awesome-marker-icon-lightred { --pin-color: #ff7675; }
+                .awesome-marker-icon-orange { --pin-color: #f39c12; }
+                .awesome-marker-icon-beige { --pin-color: #d4a373; }
+                .awesome-marker-icon-green { --pin-color: #27ae60; }
+                .awesome-marker-icon-darkgreen { --pin-color: #1e8449; }
+                .awesome-marker-icon-lightgreen { --pin-color: #7dcea0; }
+                .awesome-marker-icon-blue { --pin-color: #2980b9; }
+                .awesome-marker-icon-darkblue { --pin-color: #1a5276; }
+                .awesome-marker-icon-lightblue { --pin-color: #7fb3d8; }
+                .awesome-marker-icon-cadetblue { --pin-color: #5d8aa8; }
+                .awesome-marker-icon-purple { --pin-color: #8e44ad; }
+                .awesome-marker-icon-darkpurple { --pin-color: #6c3483; }
+                .awesome-marker-icon-pink { --pin-color: #e84393; }
+                .awesome-marker-icon-gray { --pin-color: #7f8c8d; }
+                .awesome-marker-icon-lightgray { --pin-color: #b2babb; }
+                .awesome-marker-icon-black { --pin-color: #2c3e50; }
+                /* --- Smaller popup text --- */
+                .leaflet-container { font-size: 0.75rem; }
+                .leaflet-popup-content-wrapper, .leaflet-popup-content {
+                    font-size: 0.72rem !important;
+                    line-height: 1.3 !important;
+                }
+                .leaflet-popup-content { margin: 8px 10px !important; }
+                .leaflet-popup-content-wrapper { border-radius: 6px !important; }
+
             </style>
 
             <style>html, body {
